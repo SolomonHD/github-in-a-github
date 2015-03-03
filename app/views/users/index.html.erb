@@ -1,0 +1,21 @@
+<h1> Github Clone WIP </h1>
+<h2>Interesting stats from Solomon's Github Account!</h2>
+
+<p> Total number of repos: <b><%= @user.number_of_repos %></b> </p>
+ <p> Total number of forked repos: <b><%= @user.number_forked %> </b></p>
+<table>
+  <thead>
+    <tr>
+      <th>Repo Names</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @user.list_repos.to_a.each do |u| %>
+    <tr>
+      <td><%= u %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
